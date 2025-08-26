@@ -245,3 +245,28 @@ Try out at home!
 Python who have problem, creates a package to solve it!
 
 Az s2Downloaderes 4 blokkon magyarázunk. Majd megnézzük.
+
+* Satellite imagery processing
+** NDVI
+Standard calculation. Write a function.
+
+ignore divison with 0 it is not real math.
+
+We return at the end.
+
+Bands in geodataframe. We read it the neccessary number and store
+a 32 bit float instead 16 bit to make more accurate.
+
+A numpy import elmaradt
+import numpy as np
+
+Plot generation. Only a basic plot. Colorbar at the right side.
+Accuracy depends on imagery used.
+
+litre trick. np.where makes a raster calculation.
+
+** NDWI
+Calculate the NDWI.
+
+Lake with floating plants. Treshold is modified! You can modified. What you see
+is important.
