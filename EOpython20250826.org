@@ -157,3 +157,9 @@ Miniforge meg tudja nyitni a QGISt.
   gdf_sopron_geodetic.to_file('output/sopron_polygon2.geojson', driver='GeoJSON')
 #+end_src
 We flattended the globe!
+
+* Excercise2 Raster
+More complicated.
+
+** B
+RGB used. SWIR 
