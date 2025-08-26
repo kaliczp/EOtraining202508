@@ -222,3 +222,26 @@ Band sequential.
 
 Update metadada. Need remember raster ido
 Save stack.
+
+* Clipping raster data
+Read vector and save it.
+
+~getFeatrues~ function
+
+First argument dataframe. to_json file type.
+
+Beolvastuk a geodetic koordinátás fájlt. Csak a koordinátákat.
+
+We nade update first the metadata.
+
+mask from rasterio! sorce ~src~ second argument coordinates
+crop = TRUE if not keep the same region as the full but with nodata!
+
+update function get all the things.
+
+* s2Downloadere
+Try out at home!
+
+Python who have problem, creates a package to solve it!
+
+Az s2Downloaderes 4 blokkon magyarázunk. Majd megnézzük.
