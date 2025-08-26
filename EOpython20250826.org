@@ -162,4 +162,50 @@ We flattended the globe!
 More complicated.
 
 ** B
-RGB used. SWIR 
+RGB used. SWIR
+
+We have 2 band in different m
+
+Stacking one band one 2D planar raster. Same resolutions need. Resample
+
+Resampling needs allways. Consistently correct!
+Reproject! Change. Warning!
+
+Same amount pixels. Upscale facotor 2 to increase 10 m!
+
+Inputban a raster!
+
+Several steps.
+
+#+begin_src python
+for output_filename zip togetner
+with rasterio.open(file) as dataset:
+#+end_src
+It closes the dataset!
+Store metadata!
+
+transform affine to make something!
+
+rasterio whole file in memory, dataset.read numpy array.
+Just an array! Ordinary numpy can be use data variables.
+
+upscale_factor 2!
+
+~Resample.cubic~ cubic method nearestneighbor also possible
+Lots of method availabe. ~cubic~ best one.
+
+20*20 m pixel are split to four pixels.
+
+How change pixel values?
+
+transrom.scale
+
+Use the shape!
+
+20 pixel to 10 m pixel.
+
+Last step.
+
+"w" writing mode, new file is created.
+
+Save 10 m resampled file.
