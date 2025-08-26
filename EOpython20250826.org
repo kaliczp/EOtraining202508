@@ -149,3 +149,7 @@ index indicates, 0 wich enty has the polygon! First vector.
 
 Miniforge meg tudja nyitni a QGISt.
 
+#+begin_src python
+gdf_sopron_geodetic = geodataframe_sopron_geographic.to_crs(32633)
+#+end_src
+We flattended the globe!
