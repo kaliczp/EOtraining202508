@@ -270,3 +270,36 @@ Calculate the NDWI.
 
 Lake with floating plants. Treshold is modified! You can modified. What you see
 is important.
+
+* Interactive map
+import folium above other packages.
+
+arcgisonlie server get map!!!!
+
+We use geometry again here we use geometry here.
+
+More complicated to add raster.
+
+Visualisation outside our GIS system.
+
+RGB composit with folium.
+
+Webmap works in WGS84 google has some work.
+
+We cat some percentile from top and bottom. Berakjuk a rasztert, hogy
+folium tudja olvasni. RGB értékre taranszformálás.
+
+Csak betölti és nem változtat semmit a fájlon.
+
+A megfelelő sorrendbe kell rakni a hullámhosszok szerint az
+RGB-hez. Rearranged numpy stack.
+
+profile update again.
+
+RGB there is no nodata. 0 to all everything black.
+
+CLI GDAL is used. Workhorse every IO based software. ~gdalwarp~
+
+miniforge is called conversion outside with gdalwarp
+mamba activate eo_python
+gdalwarp
