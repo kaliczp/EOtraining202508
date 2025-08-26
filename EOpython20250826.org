@@ -209,3 +209,16 @@ Last step.
 "w" writing mode, new file is created.
 
 Save 10 m resampled file.
+
+** Stack all the bands
+
+10m files!
+
+next block
+open files 10m and put an array.
+
+Stacking there are lots of probabilities.
+Band sequential.
+
+Update metadada. Need remember raster ido
+Save stack.
