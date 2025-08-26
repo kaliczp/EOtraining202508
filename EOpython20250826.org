@@ -1,0 +1,149 @@
+* Bevezetés
+Johannes presenter.
+Elkéstem OTKA megbeszélés miatt.
+Why Python?
+packages:
+- matplotlib
+- cartopy
+- plotly
+- bokeh
+Interactive maps
+- folium
+- ipyleflet
+- geemap
+aps
+- dash
+- panel
+- streamlit
+
+Strong community, academic orgs.
+Lot of tutorials, notebooks shared data. Futureproof.
+
+Ease to use and reproducibility
+* Additional
+Programing related.
+Can be tricky to install. MSWin, linux, macos
+
+Conda packaga manager recommended.
+
+Miniforge package, hand install is OK, but lots of problems.
+
+Advantages install non python dependencies R, QGIS, jupyter notebooks, PostGIS.
+
+** Open Source & Standards - Organisations
+- OSGeo
+- OGC
+Why? interoperability integration alignment with OpenSource community.
+As a community we can go further. You can benefit other peaple work.
+
+** Sustaniable coding
+- git
+- pytest
+- conda-forge
+- cookiecutter
+- pytho package index
+
+code writing, after half year not benefit.
+
+sustainable coding
+FAIR software
+
+- F :: indability
+- A :: ccessibility
+- I :: nteroperability
+- R :: eusability
+
+How to do that use ~git~ notebook is fine.
+- version control
+- stb.
+
+- Docomentation is key. Is teh code but also for external users.
+- formatting numpydoc
+- meaningful variable/function/class names
+- create unittests from beginning use CI/CD pipeline to test you code.
+Everyone go github. It helps a lot an if you change your code. Take the time and use unittest.
+
+
+* Hands-on programming setup
+https://nextcloud.gfz.de/s/Yg5A2Y69WpemkfL
+
+https://tinyurl.com/29r58zum
+
+Starting miniforge prompt után, amit előzetesen felraktak a gépekre.
+
+#+begin_src python
+mamba activate eo_python
+jupyter lab
+#+end_src
+
+~localhost:8888/lab~ volt a prompt, ahol megnyílt az oldal.
+
+EO in python - most valuable packages.ipynb indítottuk.
+
+** Gyakorlathoz
+shapely's class polygon
+
+Presentation változtat.
+
+* Jupiter notebook
+python in the background, and installad packages in the background.
+
+Small instruction. Solutions includes. Can be tray at home.
+
+Shift + ENTER next line
+
+We try to program. ChatGPT is also an option. Try to find
+the solution. Fertős polygon.
+
+google megnyitás és koordinátok
+
+Function and method Coordinate to correct order!
+
+sudo apt -y install python3-shapely
+#+begin_src python
+  from shapely.geometry import Polygon
+  CoordSopron = [(16.52,47.72),(16.714,47.72),(16.714,47.63),(16.52,47.63)]
+  SopronPoly = Polygon(CoordSopron)
+  SopronPoly
+
+  import matplotlib.pyplot as plt
+  x,y = SopronPoly.exterior.xy
+  plt.plot(x,y)
+  plt.show()
+#+end_src
+
+* Georeferencing saving polygon
+Georeferencing and geodetic, geographic coordinates.
+
+shapely only a polygon, not meet with earth
+
+Geopandas manages it.
+#+begin_src sh
+sudo apt -y install python3-geopandas
+#+end_src
+
+Use https://epsg.io csak az országnévre is ad találatot.
+
+UTM we will use, because satellite data came from.
+
+Calculate are in m^2 with geographic coordinate not possible.
+
+#+begin_src python
+  SopronPoly.area
+  # makes calculation but lat/lon.
+
+  import geopandas as gpd
+  geodataframe_sopron_geographic = gpd.GeoDataFrame(index=[0], crs='epsg:4326', geometry=SopronPoly)
+  geodataframe_sopron_geographic.crs
+#+end_src
+index indicates, 0 wich enty has the polygon! First vector.
+
+#+begin_src python
+  import matplotlib.pyplot as plt
+  from geodatasets import get_path
+  geodataframe_world = gpd.read_fiel(get_path("naturalearth.land"))
+  ax =geodataframe_world.clip([-5,37,27,55])
+  # itt lemaradtam
+#+end_src
+
+Miniforge meg tudja nyitni a QGISt.
