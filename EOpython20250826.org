@@ -150,6 +150,9 @@ index indicates, 0 wich enty has the polygon! First vector.
 Miniforge meg tudja nyitni a QGISt.
 
 #+begin_src python
-gdf_sopron_geodetic = geodataframe_sopron_geographic.to_crs(32633)
+  gdf_sopron_geodetic = geodataframe_sopron_geographic.to_crs(32633)
+  gdf_sopron_geodetic.crs
+  area_sorpon_sqm = gdf_sopron_geodetic.are[0]
+  print(f"Theare is{round(are_sorpn_sqm/1000000,6)}km+2")
 #+end_src
 We flattended the globe!
