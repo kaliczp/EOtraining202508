@@ -303,3 +303,12 @@ CLI GDAL is used. Workhorse every IO based software. ~gdalwarp~
 miniforge is called conversion outside with gdalwarp
 mamba activate eo_python
 gdalwarp
+
+reshape numpy array. Earlier shape=(1,10980,10980)
+
+~np.transpose~ with H, W, numBand
+
+finally put the raster to folium map.
+
+Satellite images come different shape, rendering it! How can it visualise it?
+QGIS makes everything in the background! Normal programs RGB 0...255 value etc.
