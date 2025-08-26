@@ -312,3 +312,29 @@ finally put the raster to folium map.
 
 Satellite images come different shape, rendering it! How can it visualise it?
 QGIS makes everything in the background! Normal programs RGB 0...255 value etc.
+
+* ML
+Chris Holden's tutorial
+
+Import multipolygon!
+
+Rasterio is easier for beginner everything is works with gdal.
+
+** RF
+2D rasters transformed.
+
+Randomforest train classifier,
+
+rf.fit(X, Y)
+
+Normally we use only a randomised test and training.
+
+Importance; higher value important band!
+
+Nodata, reshaped. From 3D array to 2D array.
+
+Profile update allways important!
+
+Classified with RF.
+
+Roof and concrete is definitelly better.
