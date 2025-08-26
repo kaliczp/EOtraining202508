@@ -135,6 +135,7 @@ Calculate are in m^2 with geographic coordinate not possible.
   import geopandas as gpd
   geodataframe_sopron_geographic = gpd.GeoDataFrame(index=[0], crs='epsg:4326', geometry=SopronPoly)
   geodataframe_sopron_geographic.crs
+  geodataframe_sopron_geographic.to_file('output/sopron_polygon.geojson', driver='GeoJSON')
 #+end_src
 index indicates, 0 wich enty has the polygon! First vector.
 
@@ -147,3 +148,4 @@ index indicates, 0 wich enty has the polygon! First vector.
 #+end_src
 
 Miniforge meg tudja nyitni a QGISt.
+
