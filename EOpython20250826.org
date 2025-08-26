@@ -154,5 +154,6 @@ Miniforge meg tudja nyitni a QGISt.
   gdf_sopron_geodetic.crs
   area_sorpon_sqm = gdf_sopron_geodetic.are[0]
   print(f"Theare is{round(are_sorpn_sqm/1000000,6)}km+2")
+  gdf_sopron_geodetic.to_file('output/sopron_polygon2.geojson', driver='GeoJSON')
 #+end_src
 We flattended the globe!
