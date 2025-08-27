@@ -1,0 +1,129 @@
+* Intro
+Mark Russwurm
+TU Munich geodesy, nem figyeltem.
+
+Bemutatkozás.
+
+Tensorflow an Pytorch
+principals and overview, practice
+
+DeepLearning Architecture
+
+Google Colab Exercise. Model Training.
+
+Focus on the training.
+
+* Sources
+Teaching books
+Shalev-Shwartsz theory
+
+Bishop&Bishop pdf online!
+
+** Topical
+Not consistens chapter authors.
+
+* Intro & Overview
+RS measure from distance by sat UAV
+
+Structured multi-band
+
+Slides
+
+Abudant data. S2 13 channels = 4TB/day sentinel.
+
+Block of tensors 4D tensors time-series
+
+** Deep Learning
+- image classification: input 3D tensor -> 1D tensor
+- segmentation 3D -> output 3D tensor
+- time-series -> classes.
+
+In 17 Today only supervised learning but. Train self supervised,
+patterns downstream taks
+
+** Timeline
+- pre 2012 small labelled dataset RF, boosting, lin reg.
+- 2015 onward large labelled supervised DL MLPs, CNNs, RNNs, focus on understanding
+- 2020 and later self supervised! using and applying
+
+Currendt.
+
+2012 Feature Lerning linear/logistic regression. Learn
+feature. Calculatin error function. ML estimation.
+Training dataset
+
+Classic ML input tensor Feature design (NDVI,NDwi, GLCM) how design
+this feature, complex classifier. Fexible models.
+
+Design knowledge in the training data
+
+Algorithm to data quality.
+
+How to store geospat data? Raster discretised, NN makes areas of species presence.
+
+Cross-model learning
+
+** What we need?
+- Knowledge
+  - What model?
+  - What pre-trained available?
+  - Which code/package to use?
+  - How to annotate data and train model?
+- Data
+  - Access of archives
+  - Storege cloud computing
+  - focus fast data loading
+  - acces with labelling software
+- Compute
+  - GPUs 10* accel
+  - Easy access to servers development and debugging!!! HPC
+    Everybody go to the cloud!
+Today first three subpoint.
+
+Recap.
+
+* Deep Model Architectures
+MLPs, CNNs, Transformes
+
+** Overview
+- 1950 MLP liear algebra
+- 1990 CNN
+- 2015 ResNet
+- 2020 Transformes
+
+** Multi-layer perceptrons (MLP)
+bio vs. lin algebra
+
+Basicly some imputs multiplied by weights.
+
+input vector -> weights -> output vector
+linear transformation
+
+Parallel computation! accelerates! GPU with lots of cores.
+Deep Learning = linear transformation
+
+Linear projection. to 2D
+
+Opossite also
+
+** Bio example
+neuron voltage quick = activated
+
+Logistic/Sigmoid function model High frequency activated function.0 to 1
+hyperbolic tangens tanh -1 to 1
+
+** New layer
+Non-linearities. Simple and effective Rectified Linear Unit ReLU
+ReLU simpler and faster computation. curved surface, good for classification.
+
+** PyTorch
+We have three layers. Model code. with ReLU function. a class example.
+
+Andrej Karpathy demo.
+
+Kornél magyarázat.
+
+Look:
+https://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html
+  
+* Break 12-13
