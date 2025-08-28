@@ -125,5 +125,150 @@ Kornél magyarázat.
 
 Look:
 https://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html
-  
+
+* Break
+
+* MLP
+* 1950
+Vectors and neighbourhoods. Image shape.
+H*W
+
+One pixel a time.
+
+Convolution is an another layer. Neighborhoods.
+Animation gif. Sharpening. Output raster.
+
+1x1 multilayer perceptor. Pixelwise MLP.
+
+Pooling operation underline feature. Reduce image size. 6*6 -> 3*3
+
+ReLU useful. All the negative numbers.
+
+** 1990 CNN
+Increased hidden layers. pulling convulution. Different layers, different
+convolution. Every layers compose shapes.
+
+A 48-49-es dián talán hibás a számolás nem OK.
+
+** Batch Normalisation and Skip Connection
+Feature space in different points. Linear transformation.
+
+Deeper layer cross dependencies. Normalisation avoids
+covariation. Re-centering data.
+
+Add original to output skip connections. If something zeroed it gives the original.
+** ResNets 2015
+Large number of layers. Complex patterns. Simple only download inilisalisation.
+* Classification to segmentation
+
+CNN classification pixel space.
+
+Segmentation separate class.
+
+CNN classification result tree.
+
+Segmentation remove layer averaging. Reduced image we have feature map.
+Problem we loose spatial resolution in each step. Coarse image.
+
+Solution: Fully Convolutional Networks high res. feature map.
+Pooling removed. Have large receptive field.
+
+Upsampling with CNN decoder
+Skip pooling and encoder reduce to smaller, upsample small image.
+Problem is that to low res pooling OK. upscaling loose details.
+
+Enc.-dec. model with pooling and upsampling
+** U-Net
+U-Net idea: Sip Connections 2015
+Skip connection add high resolution to unet. Encoder and decoder.
+Still bring information patterns. What class what pixel?
+For RS and medical images.
+
+Mainly RS same scale are date, no foregroud, background data.
+Computer vision not good close and fare person.
+
+** Take aways
+U-Net as Enc-dec.
+Medical and RGB data.
+
+* From CNNs to Vision Transformers
+- 1950
+- 1990
+- 2015
+- 2020s Transformers!
+More universal, easy to overfit.
+
+Back to convolution. Too restricted.
+Big benefit to self attention. Neighboring are more relevant.
+Need more training data!!!!
+
+** Vision Transformer models (ViT)
+Split image to patches -> patch embedding trafo to tokens. List of
+input tokens. tip 512 long. ViT model black-box input token output token is
+identifiable. Then MLP classifier. Benefit everything encoded as a token.
+
+Originally for languages.
+
+*** Underline machanism
+Keys, Queries, Values
+
+Self attention. Take tokens row to matrix. Three linear trafo. Three
+different feature matrices. Every query for similarities.
+
+Next step one lin trafo multiply keys. Attention score. Every input to output.
+Linear transformation.,
+
+Language every token is a word, How relevant the keys are. Attention matrix.
+
+Three blue one brown 40 mins video explanation.
+
+Attention matrix. Connect input tokens to outputtokens.
+
+Language sparse matrix, but picture diagonal, because spatial connection.
+
+Keys, Queries, Values
+
+V values as a multiplier.
+
+All together. Nicely programmable.
+
+** Multi-head Self-Attention (MHSA)
+Contecaneted or stacked. Tokens to heads. Staked output reduced.
+Same input and output side. Multi head
+
+** MHSA & feed forward
+Changes the features.
+
+MHSA mixes features in a dimension, FeedForward MLP processes tokens separately.
+
+** Full architecture
+Original paper.
+
+Repeated several times.
+
+** Overview
+form 1950-2020
+
+** Underlying lin trafo
+Weight to nonlinearities.
+
 * Break 12-13
+
+Itt mentem az állomásra.
+
+* Probs Distrib
+Important I.I.D.
+
+Models 
+
+** Balancing Underfitting/Overfitting
+More data better model.
+
+complexity vs.
+Regularization
+
+* Break 14:30
+
+* Practice
+https://tinyurl.com/eduhun1
+https://tinyurl.com/eduhun1solution
