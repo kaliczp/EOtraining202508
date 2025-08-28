@@ -272,3 +272,16 @@ Regularization
 * Practice
 https://tinyurl.com/eduhun1
 https://tinyurl.com/eduhun1solution
+
+* <2025-08-28 cs> gyakorlat
+https://tinyurl.com/eduhun2
+https://tinyurl.com/eduhun2solution
+Utóbbi:
+https://colab.research.google.com/drive/1w321OVT9ybgqzyek4BN19UTyitXGwetn?usp=sharing
+
+Bevezetés.
+
+#+begin_src sh
+apt install rasterio
+apt install python3-pip
+#+end_sh
