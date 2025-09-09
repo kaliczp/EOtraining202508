@@ -285,3 +285,16 @@ Bevezetés.
 apt install rasterio
 apt install python3-pip
 #+end_sh
+
+Main addition for custom dataset.
+Pytorch dataset class.
+
+Init function.
+
+wake_decay to Adam optimizer
+
+no gredient because video ram?
+
+3 végén sample_idx
+
+Unet standard for segmentation. Model from yesterday.
