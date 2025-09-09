@@ -1,0 +1,185 @@
+* Bemutatkozás
+Alison Beamich
+
+German market. App oriented project development.
+
+https://www.slido.com
+3490523
+
+* Agenda
+1. Intro to EU Downstream Market
+2. Public and private players EO
+3. Technolgy and Knwld transfer
+4. Product management
+
+* Intro Market
+Upstream:
+- satellite
+- lanunching
+- ground control
+Downstream
+- analitics
+- software
+- tools
+- sector specific application.
+
+Value chain EO upstream build infrastructure.
+Lead by space agencies and aerospace firms!
+Capital intesive high-tech!
+
+Downstream
+
+Focuses on transforming raw EO data into usable insights
+- data proc and anal
+- software tools
+- sector-specific applications, urban planning
+
+Service orineted user-facing
+Diverse actors: SMEs, start-ups, public agencies.
+
+7466268
+
+Climate, Energy the dominated
+EU bigger revenue.
+
+* Growing market
+Lots of fields. Deforestation. Decision making.
+
+Revenues increasing.
+
+job creation & SME growth
+
+Sector driven innovative start-ups
+
+https://berlin.impacthub.net/program/impact-incubator-climate-tech
+
+* Tech innovation
+AI/ML for EO anal.
+Cloud-based EO & API, Sentinel Hub
+
+Single access point. Cutting edge stuff.
+Able to access all data.
+
+Dinamic ecosystem!
+
+EU policies. Economic and innovation potential.
+https://ororatech.com
+wildfires
+
+* Policy & investment support
+BAcked by Horizon Europe, Digital Eurpe, Copernicus, InvestEU
+
+Long-term innovation support.
+
+EO within EU context - Key frameworks
+
+- Copernicus Programme flagship prowiding free and open satellite data
+- ESA
+- Green Deal
+- New Space Economy
+
+Analitics platform. more-and-more partnerships.
+
+Globalli $1.7B investment!
+
+Germany leading deep involment EO infra
+DLR (German Aerospace Center) leading in ESA
+STRONG PUBLIKC FUNDING
+
+DLR, OHB, Planet Labs!!!!
+GAF AG, EOMAP, CludEO, Airbus (HQ in Germany)
+
+Orora, constellr, LiveEO
+
+* Break
+
+* Public institutions
+- GFZ Helmholz Centre for Geosciences
+- DLR
+- bkg
+
+* GFZ
+Research group. FERN.Lab
+support remote sensing transfer projects.
+
+- Digital agriculturee
+- nature conservation
+- water in landscape
+- urban and landscape planning
+- sustainable consturction
+- infra monitoring
+
+Knowledge Transfer & Capacity Building
+
+Customized Method Development
+
+Agile Product Development - daily work in projects.
+
+GFZ & FERN.Lab
+sustaineable and fair.
+Improve code, create python packages, simple UIs open source community based...
+co-design
+
+** Products
+MiSa.C interactive web service for classification of vegetation habitats.
+
+S2Downloader python package to download (in jupyter notebook)
+
+Start-up funding
+- orient, consult
+- fund finding
+- business-plan
+
+GFZ - rs and geoinf
+
+* DLR - German Aerospace Centre
+EO Centrer applied projects
+
+- EO Solar (Solar Atlas) 20 million building analysed.
+- Policy and Int. Representation
+- National EO Strategy
+- Data Policy and Infra.
+
+* BKG Federal Agency for Cartography and Geodesy
+EO Activity
+- Copernicus coordination
+- EO Service Provision
+- AI-basad anal. data cubes
+
+* BGR Federal Institute for Geosciences and Natural Resources
+- RS expert
+- ground motion measure
+- geo-risk
+- geo-policy
+
+* Private
+- AIRBUS leading EO satellite provider 50 until now and 18 under const.
+  Biomass 2025 lanuched!
+- OHB built the EnMAP satellite
+- GAF AG
+- EOMAP Fugro aquired in 2025!
+- Planet Labs Germany (formerly RapidEye)
+- LiveEO - SurfaceScout (linear infra monitoring protection) AI based anal.
+
+* Break
+
+* Tech & knowledge transfer
+Open Science Gold Standard in academic institutions
+open-source
+Knowledge transfer access. soft skills.
+
+- problem-solving purpose-driven developments
+
+Relevant skills nad forms of learning
+
+* Product Management Public Institutions
+art of balancing user needs and technical feasibility right product at the right time.
+
+SCRUM process
+
+Product requirement document
+
+Think like a product manager!
+
+How to teach both science and soft skills?
+http://slido.com
