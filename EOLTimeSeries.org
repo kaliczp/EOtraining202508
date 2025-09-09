@@ -1,3 +1,203 @@
 * Előadó
 Kristen de Beurs
 Kristen.deBeurs@wur.nl
+
+Remote Sensing Center Cheir laboratory
+
+in Rstudio from US. Everything will online.
+
+* Intro
+Why TS
+- understand long-term changes
+- near real-time change detection
+- uniform, or non-regular intervals
+- RS reguraly at every pixels
+
+Example MODIS EVI TS
+
+Space-time.
+
+* Terminology
+- High Temporal Frequency :: hight temporal rep
+- Smoothing :: remove noise median filter, moving average.
+- Trend :: lont-term change in a series of observation.
+- TS Anal :: tools and methods
+ 
+* Bi-temporal vs. time-series
+Bi-temp. change detection (image diff; delta classification)
+Pros:
+- conceptually simple and quick
+- easy to interpret
+Cons:
+- no accurate timing of changes or understanding dynamics
+- inaccurate estimate of change magnitude
+
+TS
+- accurate monitoring of forest change dynameics and timing
+- change anal
+Cons:
+- conceptually more advanced
+- mainly pixel based
+
+* Preparing
+Important
+- image aquisition
+- Pre-processing
+- Analysis
+
+Today examples
+- Time Series Breaks
+- Land Surface Phenology
+
+* Breaks for Additive Seasonal Trend
+BFAST
+
+Components:
+- trend
+- seasonality
+- noise
+BFAST estimetes time and number of abrupt changes
+Verbesselt et al. 2010
+
+MODIS example pine plantation with three abrupt changes
+
+** BFAST principles
+Decomposition using LOESS
+
+piece-wise linear regression
+overfit: AIC and BIC weak
+LWZ better
+
+https://tinyurl.com/ynckb4ce
+
+* Break
+Practice using BFAST
+Hungary_2025 mappába
+
+She likes Rstudio markdown code.
+RStudio open.
+
+R language RStudio shell.
+
+Packages strict versioning. vs. Python.
+Python faster, Julia faster
+
+Breaks R markdown
+
+
+Now go to the MODIS Land Products: https://modis.ornl.gov/sites/ 
+
+1. Search for ‘Hungary’ and select the ‘Gyor Moson Sopron’ Site.
+2. Select the MODIS 13Q1 product by clicking on the link in the
+   table. There is no immediate need to create an account unless you
+   want to manually download the MODIS data via this website. In the
+   below ex
+
+She likes this page for small chuns for students.
+
+* Break
+* Breakpoint cont
+Decline in RSS
+
+app bflR date.
+
+* Land Surface Phenology
+LSP
+
+spatio-temporal developent of vegeteted land surface
+
+LSP COLLECTIVE SEASONAL dynameics not platn!
+
+NDVI gronw season.
+- temperate forest
+- desert
+- snow, snowmelt alaska
+
+We are good to understand NDVI timeseries.
+
+Slide 7 with explanation.
+
+LSP matter?
+Indicator of ecosystem function and climate impact.
+Apps:
+- agri
+- cli change
+- etc.
+
+** From sat to TS
+- satellite provides indies at regular intervals
+- convert pixels tempral traj
+- challenges
+  - noise
+  - gap
+  - multi season
+Steps:
+- image aqu...
+- gap filling
+- average
+- smart filter
+
+Example Zhu et al 2022.
+
+Cause of nise.
+
+LSP methods. Thresholds.
+
+50% threshold seasonal mid point.
+
+Logistic model. Fastest increase.
+
+VIIRS Phenology product LINK
+
+** Gaussian Local Function
+Normal.
+TIMESAT 4
+
+** LSP - THE MECHANICS
+packages
+
+** Phenofit package
+extensive
+3 fitting function
+5 fine fitting func
+LSP extraction:
+4 moehtod
+
+Workflog of phenofit.
+Fine fitting function.
+
+* Break 15 min
+
+* Script
+Lemaradtam a telepítés miatt.
+
+Megyünk tovább mutatja a fit-et. Snowy and cloudy quality.
+
+print(l_pheno$doy$Beck)
+Beck cserélve Zhang-ra, Gu-ra
+
+Until one pixel, but now the full dataset!!!
+
+print pixel numbers, if not like it mask out.
+
+Create rasters.
+
+Finally Start of season is printed.
+
+33*33 pixel downloaded 5 years data! Start and end of season is plotted.
+
+* Final lecture
+dense time stacks (DTS)
+
+TS to landsat?
+
+** Standard ts vs DTS anal
+LandTredr method
+
+GEE app
+
+CCDC continous change detection
+
+** Summary
+
+** QA
