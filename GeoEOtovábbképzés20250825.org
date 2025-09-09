@@ -1,0 +1,559 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: GeoEOtovábbképzés20250825
+#+date: <2025-08-25 h>
+#+author: Kalicz Péter
+#+email: kaliczp@filuska.t.hu
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.5.5)
+#+cite_export:
+
+* Intro
+Four hours
+
+ESA észrevette, hogy a magyar proposalok gyengék. Nincsen megfelelő háttértudás!
+
+Két éves időhorizonton felsőoktatási képzés legyen! Földmérő szakon szakirány
+biztosítása.
+
+Cél lenne egy mesterképzés a korszerű földmegfigyelés.
+
+Felhő, képosztályozás, idősor, hiperspektrális, műholdradarok. Három szervezet
+összefogva!
+
+Második október végén copernicus dataspace sensorok.
+
+Wageningen, GFZ & valencia. Előkurzusokat biztosítanak. Mai képzés egy hiányképzésre
+indul. Gap analisys-en alapul.
+
+Python and scripting knowledge.
+
+Tomorrow python libraries. Everything in the computer. Jamal files will provided.
+Virtual machine.
+
+Haladó osztályozások. How implement deep learning.
+
+** Probem solvers
+Márton, if you problem
+
+* GEE
+Mutlu Odzogan
+University of Wisconsin
+
+More than a decade experience. Agriculture. Decade ago in Pécs introduction.
+GEE is the cheapest platform for EO.
+
+New features. HunEdu all platrom will intro.
+
+October other Copernicus dataspace introducted.
+
+Mutlu Geographer basicli RS.
+
+Schedule:
+- Intro to GEE time-series appl
+- Gentle intor DeepLearning algorithms
+- Introductori RS
+
+Sigle page
+http://tinyurl.com/yvwueapd
+
+Lots of permanent links document.
+
+Image raster image. Single location single time step.
+We expect bands. Single aquisation.
+
+** Image collection
+Time-series many images. Each tile has a time dimension.
+
+Feature has the same property.
+
+** Feature collection
+Imported vector.
+
+Cuntry of Hungary Image collection sentinel archive.
+
+** Filter
+Keep the things which want. We want Hungary. Location filter.
+Time filter. Before study
+- study are
+- time dimension.
+
+Filter by location.
+
+Filter by cloud less then 10%. Holes on clouds.
+
+Image, single location an single time.
+
+** First link
+Grab the single thing, rename the blue.
+
+Check in the properties!
+
+** Path
+Landsat 9 foldar, collection 2 Folder tile number image. Row and image time.
+Keyword image! ~ee_Image()~
+
+Collection is a folder!
+
+In folder 6 bands.
+
+ee.Image(scaleC2(L9image))
+integer a scale. Collection L2 surface reflectance.
+0–1 the range.
+
+Deliver as an integer. Unscaled surface reflectance .5 50% reflectance.
+
+Landsat and sentinel has different numbers.
+
+~Map.centerObject~ = zoom
+
+Color compsit.
+
+reg-green-blue cserélés és run!
+
+min-max 0-0.2
+
+** Image collection
+Sentinel2 collection
+
+Hungary boudary:
+- draw
+- import
+- grab from database.
+
+var hu import boudary and filter data to Hungary.
+
+*** Masking
+qa simple not the best. Grab QA60 mask.
+
+maskS2clouds function.
+
+ee.ImageCollection("COPERNICUS/S2_SR_HARMONISED")
+For entire world, filter to hungary and date.
+
+*** Date
+- First date inclusive
+- Second date exclusive
+
+More tan 30% dont give me.
+
+maskS2cluds apply a cloud mask for image. Clouds go away. Collection. It leaves holes.
+
+.map operator every image inside collection. Mapping operator.
+
+.select again rename the band.
+
+I have a collection. Only one years. RAndom holes!
+
+*** Makes composits
+Annual composit interestion. One image for entire year. Everage for year.
+
+You must pick a statistics = reduction.
+
+Temporal reduction! Summer composit. What is summer.
+
+calendarRange belongs to months
+
+.median() keyword to reduce.
+
+Reducer to image collection result an image! And we clip it to hungary!
+
+Fall sept, okt nov.
+
+Composites for 4 querters. Capturing the collection in different
+times. Better classification.
+
+*** Feature collection skipped
+
+*** Vector
+ for every GIS:
+- geometry
+- attribute
+
+In GEE pure geometry no attached attributes.
+
+Geometry -> Feature -> Feature collection
+
+Collection with lots of geometry with attributes.
+
+Frequent error that collecion function on feature.
+
+** Functions
+Reuseable! If you make a thing several times!
+
+** Time-series anal
+25 years data. Raw format you can look at every image.
+Or turn to annual composits.
+
+25 years of summer composits.
+
+*** Boundary def
+
+*** Cloud masking
+different strategy. Cloud mask in different collection. Cloudmas
+yes/no two separate collections. Same dates!
+
+From 9–82 preprocessing! Copy and put the script begin.
+
+EVI enhanced vegetation index:
+
+NDVI not good dense vegetantionc, spares vegetation soil evedt.
+
+EVI works better low and high end! Correction factors and blue band!
+NIR and RED
+
+Apply after unscale! 0-1 range!!
+
+*** METADATA reservation
+
+Dont lose time.
+
+in 93-94 after EVI calculation I attach time! Not image only, but time!
+After manipulation we loose matadata!
+
+Frequent ERROR
+
+.set(tima and image.
+
+More collection, all images collected. remove cloud and keep summer months.
+Lots of data from Landsat an Sentinel!
+
+Early summar, entire
+
+*** Merging
+All collection is merged together! Merg makes by sensor, needs keyword
+.sort('sytem:time_start, true)
+
+
+print(coll.size())
+computing!
+
+Forester, what is change, forest plot!
+
+Forst plot
+
+time servies EVI and SWIR1
+
+var ts
+
+Select two bands
+
+.sampleRegions
+forest_example
+From raster date
+
+.flatten() make 2 dimensional data remove one of dimension! make only one column!
+*** rESULT
+Folder
+
+Image name and geometry.
+
+WKT YOU CAN CREATE GEMETRY.
+
+TAble
+
+Big change:
+- harvest
+- didsaese
+
+
+** Trend analisys
+regression slope = trend analysis
+Slope to every pixel!
+Math of change!
+
+Agricultural not useful trend analysis.
+- natural
+- urban areas.
+
+Trend to time.
+Every image with time stamp.
+
+Linearly increasing time. Fit regression to every pixel.
+
+predictor time, y var EVI
+
+for every pixel slope (and intercept trow out).
+
+Positive slope, negative slope.
+
+Linearly increasing time.
+
+Trick in 194 line.
+
+Annual summer composits! with median.
+
+.map applied to a year. Turn to image collection.
+
+One image per year.
+
+*** Trend
+214-sortól.
+
+linearRegression is the reducer now!
+
+Grey image dark down, white up,
+
+*** Inspektor
+Click on the picture.
+
+Conditional statements. only positive or negative. or zero, and landcover
+mask applied.
+
+* Ai afternoon
+AI big thing, Machine Learning
+
+Deep Learning NN exclusiveliy
+
+In 7. dia traditional algorithmls
+
+In. 8. slide Deep learning algorithml
+
+LCC : spectral bands the base.
+Every pixel individually classified.
+
+DeepLearning see the context! Random forest never say that is a cat.
+New object recognision!
+
+Give me the cars, for deep learning! Give me the tall trees.
+
+Hard to implement! Lots of computation and programming! Easily applied.
+
+** Why deep learning?
+
+convulitional algs can see eyebrows from faces!
+CNN the name.
+
+LCC 100% water but not river, lake.
+Deep learning can
+
+Possible because:
+- big data
+- hardware available massive parallelizable
+- Software, almast all freely avaliable
+
+** Image example
+Classical forest. Deep learning gives the answer.
+
+** Lots of data
+Environmental studies dont collect data, big data.
+
+** Perceptron
+Emulate human brain! 30 years ago only few neurons, but now lots of.
+
+Percepron = binary classifier threshold function.
+
+Input bands, anything. sum up and function and output.
+
+g activate or not?
+
+Activation function sigmoid. Probably belong, sigmoid one of the activation
+- sigmoid
+- hyperbolic
+- rectified linear
+- tanh
+- ReLU
+- leaky ReLU
+- ELU
+
+Many non linear things! red in the green and ws. linear decision makin will not work.
+Youtube video how to write classificatio software.
+
+Numerical example.
+
+On decision, in deep learning milions or billions.
+
+** Building NN with perceptrons
+2...10tausand observation. Cominatorics
+
+Lots of data, dense data needs.
+
+Hidden variables. billion if statements.
+
+Abstracted with hidden networks.
+
+Shallow 1-2 layers
+deep hundreds, tausends, millions.... hidden layers.
+
+** Will I pass this class?
+Observations gives the train.
+
+Predicted 0.1 10% change for a person! output actual passed (1)
+LOSS function how many arrors? Prediction and thruth table.
+Average loss calculable. Qualification of the mistake.
+
+Go back and re assign my weigths. How can you assign?
+
+** How correct?
+- part of training.
+
+Gradient descents. 3D surface, go the valley.
+Best predictor weights.
+
+All deep learning passed forward. Go back run the model forward again.
+FeedForward and backpropagation.
+
+** Learning rate
+small steps, great accuracy. learning rare keyword.
+Too small steps local minima.
+
+- lots of different learning
+- adaptive learning rates
+
+tf implemention torch implement.
+
+
+** Overfitting vs. underfitting
+We want ideal fit.
+Solve: Dropout
+
+We cut out part. Excellent learners, but not predictor.
+TOO COMPLEX = dumb stupid
+
+Drop some part of layers
+
+Other startegy early stopping.
+
+** Core fundation
+- percetion key elemnet
+- with perceptrons complex networks
+- practice to fix them.
+
+We saw 1D what about 2D.
+
+Convulutional filter. Complex structure.
+
+Excel lat, lon, temp
+
+600 cities. No sopron, give me! Regression problem, non-linear.
+
+** Colab example
+Python notebook. Notebook wonderful notebook.
+
+Colab notebook in the cloud. Versioning softwares.
+
+New and old python. Everyone have the same version!
+
+Like google document!
+
+Code and text together.
+
+mixture code and execution and work.
+
+we work together
+
+*** wget
+grab the data. and put the virtual machine. get a virtual machine.
+
+and imprt colab is free resources.
+
+*** import pandas
+pandas excel inside python script columns an rows.
+
+*** tools
+torch platform for NN
+
+*** Build data matrix
+numpy numericalpython additional capability.
+
+float32 for decimals.
+
+you can remove # to look data.
+
+3D array.
+
+*** predictor predicted
+:2 two first column
+2 coumn.
+
+*** Tensorflow
+google product, compress data and torch neeeds in tensor format.
+
+*** simple NN
+super,..
+self.fc1 input hidenn layer
+self.fc2 get hidden and output.
+
+10 hidden units! It is shallow.
+
+init and forward.
+
+*** Model init
+and loss function. compute error,
+MSE minimum loss function.
+
+torch.optim.SGD bisect
+
+*** train
+1000 times feed and backpropagation
+It never got better this model will not get better.
+
+*** prediction
+based on lat/lon
+
+simple modell quick optim, not so much.
+
+Flat surface, we are in the middle.
+
+*** ComplexNN
+Difference more layer
+nn.Dropout(0.3) 30% dropout.
+
+nn.LeakyReLU generalise.
+
+*** Adam optimiser
+Adam optimiser for complex modell better.
+After 5000 still decreasing.
+
+Start is random.
+
+** Remote sensing
+tousends image chips.
+
+Each label agricultural chip, forest chip.
+
+empty collabb start with CPU, deeplearning choose GPU!!!!!
+
+Futtatókörnyezetet lehet machinálni!
+
+Több munkamenet volt!
+
+*** CUDA
+to make gpu
+
+*** download
+zenodo
+public repo EuroSAT is also similar.
+
+fast.
+
+10 cats.
+
+*** training
+0.8 training.
+
+0.2 testing.
+
+*** Pretrained model downloaded
+97 MB-os modell letöltve.
+
+You can save it. Some complex models trained until a month!
+
+Few thousand forints / months.
+
+Download model from the cloud.
+
+Test the chips
+
+*** LLM
+text command detects objects.
+
+** Zárás
+* Labor felhasználó
+Felhasználó nrrclab
+jelszo nrrclabor
